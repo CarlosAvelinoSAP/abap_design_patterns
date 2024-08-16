@@ -65,16 +65,20 @@ CLASS lclSaleDocumentFactory IMPLEMENTATION.
 
   METHOD create.
     DATA loDoc TYPE REF TO lclSaleDocument.
-    CASE imDocType.
-      WHEN 'B'.
-        CREATE OBJECT loDoc TYPE lclQuotation.
-      WHEN 'C'.
-        CREATE OBJECT loDoc TYPE lclOrder.
-      WHEN OTHERS.
-*            default, create order
-        CREATE OBJECT loDoc TYPE lclOrder.
-    ENDCASE.
-    reDoc = loDoc.
+*    CASE imDocType.
+*      WHEN 'B'.
+**        CREATE OBJECT loDoc TYPE lclQuotation.
+*        reDoc = NEW lclQuotation(  ).
+*      WHEN 'C'.
+**        CREATE OBJECT loDoc TYPE lclOrder.
+*        reDoc = NEW lclOrder(  ).
+*      WHEN OTHERS.
+**            default, create order
+**        CREATE OBJECT loDoc TYPE lclOrder.
+*        reDoc = NEW lclOrder(  ).
+*    ENDCASE.
+*    reDoc = loDoc.
+    reDoc = COND #( WHEN imDocType = 'B' THEN new lclquotation(  ) WHEN imDocType = 'C' THEN new lclOrder(  ) ELSE new lclOrder(  ) ).
   ENDMETHOD.
 
 ENDCLASS.
