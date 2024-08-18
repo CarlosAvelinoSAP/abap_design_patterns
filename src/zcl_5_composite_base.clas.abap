@@ -48,10 +48,13 @@ ENDCLASS.
 
 
 
-CLASS zcl_5_composite_base IMPLEMENTATION.
+CLASS ZCL_5_COMPOSITE_BASE IMPLEMENTATION.
+
+
   METHOD constructor.
     me->flight = flight.
   ENDMETHOD.
+
 
   METHOD factory.
 
@@ -96,5 +99,4 @@ CLASS zcl_5_composite_base IMPLEMENTATION.
   METHOD zif_5_composite~get_flight_details.
     flight = me->flight.
   ENDMETHOD.
-
 ENDCLASS.

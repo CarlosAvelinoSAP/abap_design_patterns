@@ -29,7 +29,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_2_instance IMPLEMENTATION.
+CLASS ZCL_2_INSTANCE IMPLEMENTATION.
+
 
   METHOD calculate_flight_price.
 

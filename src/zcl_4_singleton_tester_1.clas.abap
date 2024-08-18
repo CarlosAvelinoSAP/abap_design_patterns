@@ -11,7 +11,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_4_singleton_tester_1 IMPLEMENTATION.
+CLASS ZCL_4_SINGLETON_TESTER_1 IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
     DATA(logger) = zcl_4_singleton=>factory(  ).
     logger->write_to_log( |First Test| ).

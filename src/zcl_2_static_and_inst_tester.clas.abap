@@ -11,7 +11,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_2_static_and_inst_tester IMPLEMENTATION.
+CLASS ZCL_2_STATIC_AND_INST_TESTER IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
 
 

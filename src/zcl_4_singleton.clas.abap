@@ -15,7 +15,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_4_singleton IMPLEMENTATION.
+CLASS ZCL_4_SINGLETON IMPLEMENTATION.
+
+
   METHOD factory.
     IF self IS NOT BOUND.
       self = NEW zcl_4_singleton(  ).
@@ -23,12 +25,14 @@ CLASS zcl_4_singleton IMPLEMENTATION.
     results = self.
   ENDMETHOD.
 
+
   METHOD write_to_log.
     IF log_entry IS NOT INITIAL.
       APPEND INITIAL LINE TO log REFERENCE INTO DATA(log_line).
       log_line->* = log_entry.
     ENDIF.
   ENDMETHOD.
+
 
   method read_log.
    results = log.

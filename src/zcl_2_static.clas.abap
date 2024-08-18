@@ -28,7 +28,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_2_static IMPLEMENTATION.
+CLASS ZCL_2_STATIC IMPLEMENTATION.
+
+
   METHOD calculate_flight_price.
     DATA plane_type TYPE /dmo/plane_type_id.
 

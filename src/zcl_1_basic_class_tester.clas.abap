@@ -11,7 +11,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_1_basic_class_tester IMPLEMENTATION.
+CLASS ZCL_1_BASIC_CLASS_TESTER IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
 *    out->write( |sample_Internal_Table Starter| ).
 *    out->write( zcl_1_basic_class=>sample_Internal_Table ).
@@ -38,5 +40,4 @@ CLASS zcl_1_basic_class_tester IMPLEMENTATION.
     out->write( class_Instance_New->my_first_method( `First Call Of New Instance` ) ).
     out->write( class_Instance_New->my_second_method(  ) ).
   ENDMETHOD.
-
 ENDCLASS.

@@ -24,13 +24,15 @@ ENDCLASS.
 
 
 
-CLASS zcl_1_basic_class IMPLEMENTATION.
+CLASS ZCL_1_BASIC_CLASS IMPLEMENTATION.
+
 
   METHOD my_First_Method.
     export = |${ import } - Plus New Stuff|.
     APPEND INITIAL LINE TO sample_Internal_Table REFERENCE INTO DATA(itab_Line).
     itab_Line->* = export.
   ENDMETHOD.
+
 
   method my_Second_Method.
     sample_Internal_Table = me->sample_Internal_Table.

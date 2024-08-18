@@ -14,7 +14,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_5_composite_a340 IMPLEMENTATION.
+CLASS ZCL_5_COMPOSITE_A340 IMPLEMENTATION.
+
+
   METHOD zif_5_composite~calculate_flight_price.
     price = super->calculate_flight_price( ).
     price-price = price-price + 15.

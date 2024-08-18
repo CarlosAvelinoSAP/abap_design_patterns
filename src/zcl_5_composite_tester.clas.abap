@@ -11,7 +11,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_5_composite_tester IMPLEMENTATION.
+CLASS ZCL_5_COMPOSITE_TESTER IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
     SELECT * FROM /dmo/flight

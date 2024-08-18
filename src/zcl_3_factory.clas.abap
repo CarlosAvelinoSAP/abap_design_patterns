@@ -15,14 +15,18 @@ ENDCLASS.
 
 
 
-CLASS zcl_3_factory IMPLEMENTATION.
+CLASS ZCL_3_FACTORY IMPLEMENTATION.
+
+
     method constructor.
         stored_my_stuff = my_stuff.
     endmethod.
 
+
     method factory.
        my_instance = new zcl_3_factory( my_stuff ).
     endmethod.
+
 
     method get_stored_stuff.
       results = me->stored_my_stuff.
